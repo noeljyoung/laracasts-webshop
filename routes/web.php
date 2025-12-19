@@ -1,10 +1,9 @@
 <?php
 
+use App\Livewire\StoreFront;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', StoreFront::class)->name('home');
 
 Route::middleware([
     'auth:sanctum',
